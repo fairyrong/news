@@ -1,0 +1,31 @@
+/*前端6期 后台管理系统-登录界面 2016-2-20*/
+/*登录表单*/
+.form-signin{
+	width: 500px;
+	padding: 70px;
+	margin: 100px auto;
+	text-align: center;
+	color: #fff;
+	background-color: #104E8B;
+	border-radius: 50px;
+}
+/*登录标题*/
+.form-signin-heading{
+	margin: 0;
+	margin-bottom: 50px;
+}
+/*输入框*/
+.email,.password{
+	display: block;
+	margin: 5px auto;
+	color: #000;
+}
+/*单选框*/
+label{
+	margin: 3px 10px;
+}
+/*按钮*/
+.form-group .btn{
+	width: 80px;
+	margin: 3px 10px;
+}

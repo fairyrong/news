@@ -1,0 +1,305 @@
+<!--前端6期 百度新闻后台管理系统-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>新闻后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="./css/manage.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+</head>
+
+<body>
+    <!--大框-->
+    <div class="con">
+        <!--侧边栏-->
+        <div class="sidebar col-md-3">
+            <!--侧栏图标-->
+            <div class="sidebar-header">
+                <img src="./img/logo.png">
+            </div>
+            <!--侧栏导航-->
+            <ul class="nav">
+                <li class="active">
+                    <h4>首页</h4></li>
+                <li class="active hover">
+                    <h4>管理新闻</h4></li>
+            </ul>
+            <!--侧栏版权-->
+            <footer>
+                <p>2016&nbsp;&copy;&nbsp;版权所有&nbsp;西安邮电大学&nbsp;计算机学院</p>
+                <p>&nbsp;中国西安&nbsp;长安区韦郭路&nbsp;710121</p>
+                <p>电话(Tel):&nbsp;029-88166055</p>
+            </footer>
+        </div>
+        <!--主页面-->
+        <div class="page-box">
+            <!--首页-->
+            <div id="page-home" class="page-block">
+                <!--页头-->
+                <div class="refresh">
+                    <h1>新闻后台<small>首页</small></h1>
+                </div>
+                <p>
+                    可通过类别查询新闻
+                </p>
+                <p>
+                    对新闻进行增,删,改
+                </p>
+            </div>
+            <!--end-首页-->
+            <!---->
+            <div id="page-review" class="page-block page-show">
+                <!--页头-->
+                <div class="refresh">
+                    <h1>新闻后台<small>管理中心</small></h1>
+                    <a>
+                        <p class="refreshBtn">刷新</p>
+                    </a>
+                </div>
+                <!--资源表-->
+                <!--查询-->
+                <form class="form-inline">
+                    <!--统计-->
+                    <div class="form-group searchNews">
+                        <div class="newsKindShow">当前类别：<span>所有</span></div>
+                        <div class="newsKindSelect">
+                            <label>新闻类别：</label>
+                            <select class="selected" value="推荐">
+                                <option value="所有">所有</option>
+                                <option value="推荐">推荐</option>
+                                <option value="百家">百家</option>
+                                <option value="本地">本地</option>
+                                <option value="图片">图片</option>
+                                <option value="娱乐">娱乐</option>
+                                <option value="军事">军事</option>
+                                <option value="女人">女人</option>
+                                <option value="搞笑">搞笑</option>
+                                <option value="科技">科技</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="btn searchBtn">查询</button>
+                </form>
+                <!--新闻列表-->
+                <form class="">
+                    <div class="over">
+                        <table class="table">
+                            <thead>
+                                <th>新闻编号</th>
+                                <th>类别</th>
+                                <th>新闻标题</th>
+                                <th>图片</th>
+                                <th>详细内容</th>
+                                <th>新闻链接</th>
+                                <th>发布时间</th>
+                                <th>操作</th>
+                            </thead>
+                            <tr class="lastRow">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <a class="addNews">新增一行</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+                <!--新闻增加框-->
+                <form class="newsAdd newsData">
+                    <div class="closeNews">×</div>
+                    <div class="editNews">编辑新闻</div>
+                    <table class="table">
+                        <thead>
+                            <th>名称</th>
+                            <th>内容</th>
+                            <th></th>
+                        </thead>
+                        <!--标题-->
+                        <tr>
+                            <td>
+                                <label for="addName">新闻标题：</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="addName" name="addName" value="">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--图片-->
+                        <tr>
+                            <td>
+                                <label for="choseImg">选择图片：</label>
+                            </td>
+                            <td>
+                                <input type="file" id="choseImg" name="choseImg">
+                                <div class="imgShow"></div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--内容-->
+                        <tr>
+                            <td>
+                                <label for="addText">新闻简介：</label>
+                            </td>
+                            <td>
+                                <textarea class="form-control" rows="2" id="addText" name="addText"></textarea>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--链接-->
+                        <tr>
+                            <td>
+                                <label for="addLink">新闻链接：</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="addLink" name="addLink">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--时间-->
+                        <tr>
+                            <td>
+                                <label for="addTime">上传时间：</label>
+                            </td>
+                            <td>
+                                <input type="date" class="form-control" id="addTime" name="addTime">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--类型-->
+                        <tr>
+                            <td>
+                                <label for="choseKind">新闻类别：</label>
+                            </td>
+                            <td>
+                                <select id="choseKind" name="choseKind">
+                                    <option value="推荐">推荐</option>
+                                    <option value="百家">百家</option>
+                                    <option value="本地">本地</option>
+                                    <option value="图片">图片</option>
+                                    <option value="娱乐">娱乐</option>
+                                    <option value="社会">社会</option>
+                                    <option value="军事">军事</option>
+                                    <option value="女人">女人</option>
+                                    <option value="搞笑">搞笑</option>
+                                    <option value="科技">科技</option>
+                                </select>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--操作-->
+                        <tr>
+                            <td class="tdLast">
+                                <button type="reset" class="btn">重置</button>
+                            </td>
+                            <td class="tdLast">
+                                <button type="submit" class="btn saveNews">保存</button>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </form>
+                <form class="newsUpdate newsData">
+                    <div class="closeNews">×</div>
+                    <div class="editNews">编辑新闻</div>
+                    <table class="table">
+                        <thead>
+                            <th>名称</th>
+                            <th>内容</th>
+                            <th></th>
+                        </thead>
+                        <!--标题-->
+                        <tr>
+                            <td>
+                                <label for="newsId">新闻编号：</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="newsId" name="newsId" value="">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--标题-->
+                        <tr>
+                            <td>
+                                <label for="addName">新闻标题：</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="addName" name="addName" value="">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--图片-->
+                        <tr>
+                            <td>
+                                <label for="choseImg">选择图片：</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="choseImg" name="choseImg">
+                                <div class="imgShow"></div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--内容-->
+                        <tr>
+                            <td>
+                                <label for="addText">新闻简介：</label>
+                            </td>
+                            <td>
+                                <textarea class="form-control" rows="2" id="addText" name="addText" value=""></textarea>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--链接-->
+                        <tr>
+                            <td>
+                                <label for="addLink">新闻链接：</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="addLink" name="addLink" value="">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--时间-->
+                        <tr>
+                            <td>
+                                <label for="addTime">上传时间：</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="addTime" name="addTime">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--类型-->
+                        <tr>
+                            <td>
+                                <label for="choseKind">新闻类别：</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="choseKind" name="choseKind">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!--操作-->
+                        <tr>
+                            <td class="tdLast">
+                                <button type="reset" class="btn">重置</button>
+                            </td>
+                            <td class="tdLast">
+                                <button type="submit" class="btn saveNews">保存</button>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript" src="./js/jquery.js"></script>
+        <script type="text/javascript" src="./js/manage.js"></script>
+</body>
+
+</html>

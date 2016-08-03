@@ -1,0 +1,161 @@
+ /*前端6期 后台管理系统-主界面 2016-2-20*/
+/*大框*/
+.con{
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	min-width: 1024px;
+}
+/*侧栏*/
+.con .sidebar{
+	position:fixed;
+	background-color: #104E8B;
+	height:100%;
+	padding: 0;
+}
+.sidebar-header{
+	background: #fff;
+	width: 100%;
+	padding: 15px 0;
+}
+.sidebar-header img{
+	width: 50%;
+}
+/*导航列表*/
+.active{
+	color: #fff;
+}
+/*导航链接鼠标滑过*/
+.hover{
+	background: #fff;
+	color: #104E8B;
+	box-shadow: 0 0 6px #000;
+}
+/*导航标题*/
+.nav h4{
+	font-weight: bold;
+	line-height: 50px;
+	height: 50px;
+}
+
+/*导航页脚*/
+.sidebar footer{
+	width: 100%;
+	margin: 0 auto;
+	position:absolute;
+	bottom: 0;
+	font-size: 12px;
+	color: rgba(255,255,255,.3);
+}
+/*导航页脚段落*/
+footer p{
+	margin:3px 0;
+}
+/*页头刷新*/
+.refresh{
+	width: 100%;
+	background-color:#104E8B;
+	color: #fff;
+}
+/*页头标题*/
+.refresh h1{
+	display: inline-block;
+	margin: 0;
+	line-height: 83px;
+	font-weight: bold;
+}
+/*页头刷新链接*/
+.refresh a{
+	color: #fff;
+	float: right;
+	padding: 50px 20px 0 0;
+	display: block;
+}
+/*链接划后*/
+.refresh a:hover{
+	color: #fff;
+	float: right;
+	padding: 50px 20px 0 0;
+	display: block;
+}
+/*页头小标题*/
+.refresh small{
+	color:#fff;
+}
+.page-box{
+	margin-left: 25%;
+	width: 75%;
+}
+/*页面块*/
+.page-block{
+	display: none;
+	color: #104E8B;
+	font-weight: bold;
+	text-align: center;
+}
+.page-show{
+	display: block;
+}
+.searchNews{
+	width: 90%;
+	padding: 10px 0;
+}
+.btn{
+	margin-left: 20px;
+	background: #6CA6CD;
+	color: #fff;
+}
+.newsKindShow{
+	display: block;
+	float: left;
+}
+.newsKindSelect{
+	float: right;
+}
+/*表格滑轮*/
+.page-block .over{
+	width: 100%;
+	height: 400px;
+	overflow-x: auto; 
+	overflow-y: auto;
+}
+/*表格表头*/
+.page-block .table th{
+	background-color: #6CA6CD;
+	text-align: center;
+}
+.newsData{
+	display: none;
+	position: fixed;
+	top:15%;
+	left:35%;
+	width: 500px;
+	height: 530px;
+	z-index:1000;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow:  0 0 50px rgba(0,0,0,0.3); 
+	padding: 20px;
+	border-top:50px solid #104E8B;
+}
+.newsDataShow{
+	display: block;
+}
+.tdLast{
+	width: 50%;
+}
+.closeNews{
+	font-size: 40px;
+	position:absolute;
+	top:-50px;
+	right:10px;
+	color:#fff;
+}
+.editNews{
+	position:absolute;
+	top:-40px;
+	left:10px;
+	color:#fff;
+}
